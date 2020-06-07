@@ -180,9 +180,9 @@ class ImageFolder(data.Dataset):
         # image intensity profiles across the sequence 
         local_intensity_profiles = [None, None, None,None]
         local_intensity_profiles[0] = np.zeros( (num_imgs, num_channel, input_height-self.half_window*2, input_width-self.half_window*2) )
-        local_intensity_profiles[1] = np.zeros( (num_imgs, num_channel, input_height/2-self.half_window*2, input_width/2-self.half_window*2) )
-        local_intensity_profiles[2] = np.zeros( (num_imgs, num_channel, input_height/4-self.half_window*2, input_width/4-self.half_window*2) )
-        local_intensity_profiles[3] = np.zeros( (num_imgs, num_channel, input_height/8-self.half_window*2, input_width/8-self.half_window*2) )
+        local_intensity_profiles[1] = np.zeros( (num_imgs, num_channel, int(input_height/2)-self.half_window*2, int(input_width/2)-self.half_window*2) )
+        local_intensity_profiles[2] = np.zeros( (num_imgs, num_channel, int(input_height/4)-self.half_window*2, int(input_width/4)-self.half_window*2) )
+        local_intensity_profiles[3] = np.zeros( (num_imgs, num_channel, int(input_height/8)-self.half_window*2, int(input_width/8)-self.half_window*2) )
 
         # random permutation 
         #random_image_list = np.random.permutation(num_imgs)
