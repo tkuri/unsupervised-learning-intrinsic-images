@@ -2,7 +2,7 @@ import timeit
 import numpy as np
 # from ..image_util import gaussian_blur_gray_image_nz
 # from ..image_util import luminance
-import data.image_util
+from data.image_util import image_util
 # from .prob_abs_r import ProbAbsoluteReflectance
 # from .prob_abs_s import ProbAbsoluteShading
 import sys
