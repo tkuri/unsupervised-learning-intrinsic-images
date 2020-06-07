@@ -798,7 +798,7 @@ class MultiUnetSkipConnectionBlock(nn.Module):
 										kernel_size=4, stride=2,
 										padding=1), norm_layer(outer_nc, affine=True)]
 			#  for rgb shading 
-			int_conv = [nn.AdaptiveAvgPool2d((1,1)) , nn.ReLU(False),  nn.Conv2d(inner_nc, inner_nc/2, kernel_size=3, stride=1, padding=1), nn.ReLU(False)]
+			int_conv = [nn.AdaptiveAvgPool2d((1,1)) , nn.ReLU(False),  nn.Conv2d(inner_nc, int(inner_nc/2), kernel_size=3, stride=1, padding=1), nn.ReLU(False)]
 			fc = [nn.Linear(256, 3)]
 			self.int_conv = nn.Sequential(* int_conv) 
 			self.fc = nn.Sequential(* fc)
