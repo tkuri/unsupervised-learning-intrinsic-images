@@ -1,0 +1,8 @@
+BigTime/
+checkpoints/
+data/__pycache__/
+data/krahenbuhl2013/__pycache__/
+data/krahenbuhl2013/krahenbuhl2013.cpython-36m-x86_64-linux-gnu.so
+models/__pycache__/
+options/__pycache__/
+util/__pycache__/

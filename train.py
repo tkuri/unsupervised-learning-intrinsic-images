@@ -15,12 +15,15 @@ import torch
 opt = TrainOptions().parse()  # set CUDA_VISIBLE_DEVICES before import torch
 
 root = "/"
-saw_root = root + "/phoenix/S6/zl548/SAW/saw_release/"
+# saw_root = root + "/phoenix/S6/zl548/SAW/saw_release/"
+saw_root = "../CGIntrinsics/CGIntrinsics/SAW/saw_images_512/"
 
-IIW_root = root +'/phoenix/S6/zl548/IIW/iiw-dataset/data/'
+# IIW_root = root +'/phoenix/S6/zl548/IIW/iiw-dataset/data/'
+IIW_root = "../CGIntrinsics/CGIntrinsics/IIW/iiw-dataset/data/"
 IIW_test_list_dir = './IIW_test_list/'
 
-train_root = root + '/phoenix/S6/zl548/AMOS/test/'
+# train_root = root + '/phoenix/S6/zl548/AMOS/test/'
+train_root = './BigTime/phoenix/S6/zl548/AMOS/BigTime_v1/'
 train_list_dir = './BigTime_train_list/'
 data_loader = CreateDataLoader(train_root, train_list_dir)
 
