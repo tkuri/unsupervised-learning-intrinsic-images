@@ -408,17 +408,23 @@ class JointLoss(nn.Module):
 		rs_loss =  self.w_rs_dense * self.SpatialTemporalBilateralRefSmoothnessLoss(prediction_R, targets, 'R' ,5) 
 		shading_color_loss = self.w_regularization * self.ShadingPenaltyLoss(prediction_S)
 
-		print("ss loss", ss_loss.data[0])
-		print("rs_loss", rs_loss.data[0])
-		print("rl_loss loss", rl_loss.data[0])
-		print("rc_loss loss", rc_loss.data[0])
-		print("regularization loss ", shading_color_loss.data[0])
+		# print("ss loss", ss_loss.data[0])
+		# print("rs_loss", rs_loss.data[0])
+		# print("rl_loss loss", rl_loss.data[0])
+		# print("rc_loss loss", rc_loss.data[0])
+		# print("regularization loss ", shading_color_loss.data[0])
+		print("ss loss", ss_loss.data)
+		print("rs_loss", rs_loss.data)
+		print("rl_loss loss", rl_loss.data)
+		print("rc_loss loss", rc_loss.data)
+		print("regularization loss ", shading_color_loss.data)
 
 		total_loss = ss_loss + rs_loss + rl_loss  + rc_loss + shading_color_loss 
 
 		self.total_loss = total_loss
 
-		return total_loss.data[0]
+		# return total_loss.data[0]
+		return total_loss.data
 
 	def get_loss_var(self):
 		return self.total_loss
